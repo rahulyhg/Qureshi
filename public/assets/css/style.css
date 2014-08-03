@@ -1,0 +1,289 @@
+body{
+  background-color: #c1e09e;
+}
+
+
+.top-spacing {
+  margin-top: 20px;
+}
+
+
+.top-spacing-big {
+  margin-top: 50px;
+}
+
+/* line 13, ../sass/style.scss 
+<option value="1">
+.inline {
+  display: inline-block;
+}
+
+/* line 16, ../sass/style.scss 
+<option value="1">
+.block {
+  display: block;
+}
+
+/* line 19, ../sass/style.scss 
+<option value="1">
+.m-show {
+  display: none;
+}
+@media screen and (max-width: 992px) {
+  /* line 19, ../sass/style.scss 
+<option value="1">
+  .m-show {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  /* line 27, ../sass/style.scss 
+<option value="1">
+  .content {
+    padding: 0 20px;
+  }
+  /* line 30, ../sass/style.scss 
+<option value="1">
+  .content > .row {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  /* line 34, ../sass/style.scss 
+<option value="1">
+  .content .carousel.slide {
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+}
+
+/******************* Overlay **********************
+<option value="1">
+/* line 42, ../sass/style.scss 
+<option value="1">
+.overlay {
+  position: absolute;
+  background-color: lightgray;
+  opacity: 0.5;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+/* line 51, ../sass/style.scss 
+<option value="1">
+.overlay .overlay-spinner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -62px;
+  margin-top: -62px;
+}
+
+/******************* Header **********************
+<option value="1">
+/* line 60, ../sass/style.scss 
+<option value="1">
+.header {
+  height: 120px;
+}
+/* line 63, ../sass/style.scss 
+<option value="1">
+.header img.logo {
+  height: 120px;
+  margin-left: 20px;
+}
+
+/************************ Navbar ****************************
+<option value="1">
+/* line 70, ../sass/style.scss 
+<option value="1">
+.navbar.navbar-default {
+  margin-bottom: 0;
+  color: white;
+  border-bottom: none;
+  border: none;
+  background: #bf6e4e;
+  /* Old browsers 
+<option value="1">
+  /* IE9 SVG, needs conditional override of 'filter' to 'none' 
+<option value="1">
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2JmNmU0ZSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iIzhjMzMxMCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNiZjZlNGUiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+  background: -moz-linear-gradient(top, #bf6e4e 0%, #8c3310 50%, #bf6e4e 100%);
+  /* FF3.6+ 
+<option value="1">
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #bf6e4e), color-stop(50%, #8c3310), color-stop(100%, #bf6e4e));
+   Chrome,Safari4+ 
+  background: -webkit-linear-gradient(top, #bf6e4e 0%, #8c3310 50%, #bf6e4e 100%);
+  /* Chrome10+,Safari5.1+ 
+<option value="1">
+  background: -o-linear-gradient(top, #bf6e4e 0%, #8c3310 50%, #bf6e4e 100%);
+  /* Opera 11.10+ 
+<option value="1">
+  background: -ms-linear-gradient(top, #bf6e4e 0%, #8c3310 50%, #bf6e4e 100%);
+  /* IE10+ 
+<option value="1">
+  background: linear-gradient(to bottom, #bf6e4e 0%, #8c3310 50%, #bf6e4e 100%);
+  /* W3C 
+<option value="1">
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#bf6e4e', endColorstr='#bf6e4e',GradientType=0 );
+  /* IE6-8 
+<option value="1">
+}
+*/
+.navbar{
+  background-color: #6b9e2b;
+}
+.navbar.navbar-default .navbar-nav li a,
+.navbar.navbar-default .navbar-nav li a:hover,
+.navbar.navbar-default .navbar-nav li a:focus,
+.navbar.navbar-default .navbar-nav li a:active,
+.navbar.navbar-default .navbar-nav li a.active {
+  color: white;
+}
+
+.navbar.navbar-default .navbar-nav li.active a {
+  background: #c1e09e;
+}
+
+.navbar.navbar-default .navbar-nav li.dropdown.open > a {
+  background: #c1e09e;
+}
+/* line 106, ../sass/style.scss 
+<option value="1">
+.navbar.navbar-default .navbar-nav li.dropdown.open .dropdown-menu a {
+  color: black;
+}
+*/
+
+.navbar-default .navbar-brand {
+  color: white;
+}
+
+/************************ Disqus Comment Box ****************************
+<option value="1">
+/* line 118, ../sass/style.scss 
+<option value="1">
+#disqus_thread {
+  margin-top: 50px;
+}
+
+/************************ Committee Page ************************
+<option value="1">
+/* line 122, ../sass/style.scss 
+<option value="1">
+*/
+.thumbnail img {
+  width: 100%;
+}
+
+/************************ Gallery Page ************************
+<option value="1">
+/* line 126, ../sass/style.scss 
+<option value="1">
+.cycle-slideshow img {
+  max-width: 100%;
+}
+
+/************************ Index Page ************************
+<option value="1">
+/* line 131, ../sass/style.scss 
+<option value="1">
+.carousel-inner .item {
+  height: 550px;
+}
+@media screen and (max-width: 992px) {
+  /* line 131, ../sass/style.scss 
+<option value="1">
+  .carousel-inner .item {
+    height: 250px;
+  }
+}
+/* line 137, ../sass/style.scss 
+<option value="1">
+.carousel-inner .item img {
+  height: 100%;
+  width: 100%;
+}
+
+/************************ News Page ************************/
+.news-article {
+  position: relative;
+}
+
+.news-article .news-thumbnail {
+  float: left;
+  margin: 10px 20px 10px 0;
+  max-width: 200px;
+  max-height: 200px;
+}
+
+/************************ Album Index Page ************************
+<option value="1">
+/* line 157, ../sass/style.scss 
+<option value="1">
+.gallery-album-cover img {
+  height: 300px;
+}
+
+/************************ Album show Page ************************
+<option value="1">
+/* line 162, ../sass/style.scss 
+<option value="1">
+.album-delete-form {
+  position: absolute;
+}
+
+/************************ Event Calendar ************************
+<option value="1">
+/* line 166, ../sass/style.scss 
+<option value="1">
+#calendar .fc-content {
+  background-color: white;
+}*/
+
+.panel {
+  background: #c1e09e;
+}
+
+.panel-primary > .panel-heading{
+  background-color: #6b9e2b;
+  color: #fff;
+  border-color: #6b9e2b;
+}
+
+.panel-primary{
+  border-color: #6b9e2b;
+}
+
+.panel-info > .panel-heading{
+  background-color: #6b9e2b;
+  color: #fff;
+  border-color: #6b9e2b;
+}
+
+.panel-info{
+  border-color: #6b9e2b;
+}
+
+.name{
+  text-align: center;
+  font-size: 20px;
+}
+
+.designation{
+  text-align: center;
+  font-size: 14px;
+}
+
+.btn-login{
+  background-color: #6b9e2b; 
+  color: #fff;
+  border-color: #6b9e2b; 
+}
+
+.btn-login:hover{
+  background-color: #6b9e2b; 
+  color: #fff;
+  border-color: #6b9e2b; 
+}
