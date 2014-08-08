@@ -107,9 +107,9 @@ class AlbumController extends \BaseController {
    */
   public function show($id)
   {
-    $album = $this->album->getAllPhotos($id);
+    $album = Album::with('albumsPhotos')->find($id);
     $title = App::getLocale() == "en" ? $album->name : $album->guj_name;
-    return View::make('album.show', compact('album','title'));
+    return View::make('albums.show', compact('album','title'));
   }
 
   /**
@@ -120,8 +120,8 @@ class AlbumController extends \BaseController {
    */
   public function edit($id)
   {
-    $album = $this->album->getById($id);
-    return View::make('album.edit', compact('album'));
+    $album = Album::find($id);
+    return View::make('albums.edit', compact('album'));
   }
 
   /**
@@ -132,8 +132,59 @@ class AlbumController extends \BaseController {
    */
   public function update($id)
   {
-    $albumId = $this->album->updatealbum(Input::all(), $id);
-    $this->albumPhotos->addPhotosToAlbum($albumId, Input::all());
+    $input = Input::all();
+    $rules = array(
+      'name' => 'required',
+      'guj_name' => 'required',
+      'date' => 'date'
+    );
+
+
+    // Validate input
+    $v = Validator::make($input, $rules);
+    if($v->fails()){
+      return Redirect::route('gallery.edit',array($id))->withInput()->withErrors( $v->messages() );
+    }
+
+    if(! is_null( $input['date'] ) )
+    {
+      $input['date'] = date('Y-m-d', strtotime($input['date']));
+    }
+
+    $album = Album::find($id);
+    $album->fill($input);
+    $album->save();
+
+    if( count($input['files']) == 1 && is_null($input['files'][0]) ){
+      return;
+    }
+
+    $files = array();
+
+    foreach ($input['files'] as $index => $file) {
+      $fileName = sha1(time() . rand()) .".". $file->getClientOriginalExtension();
+      $file->move(public_path().'/image/gallery/', $fileName);
+
+      array_push($files, $fileName);
+    }
+
+    $albumPhotos = array();
+
+    foreach ($files as $index => $file) {
+      array_push($albumPhotos, array(
+        'album_id' => $album->id,
+        'filename' => $file,
+        'created_at' => Carbon\Carbon::now(),
+        'updated_at' => Carbon\Carbon::now()
+      ));
+    }
+
+    $albumPhoto = new AlbumPhoto();
+
+    if(! $albumPhoto->insert($albumPhotos) ){
+      return Redirect::route('gallery.edit', array($id))->withError('There was error creating Album');
+    }
+
     return Redirect::route('gallery.index')->withSuccess('Album updated successfully');
   }
 
@@ -145,7 +196,9 @@ class AlbumController extends \BaseController {
    */
   public function destroy($id)
   {
-    $this->album->removeAlbum($id);
+    $album = Album::find($id);
+    $album->delete();
+
     return Redirect::route('gallery.index')->withSuccess('News removed successfully');
   }
 

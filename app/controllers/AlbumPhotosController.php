@@ -2,8 +2,6 @@
 
 class AlbumPhotosController extends \BaseController {
 
-  private $photo;
-
   public function __construct() {
     $this->beforeFilter('auth', array(
       'only' => array('destroy')
@@ -12,7 +10,7 @@ class AlbumPhotosController extends \BaseController {
 
   public function show($albumId)
   {
-    $paginator = $this->photo->getPictureWithPagination($albumId);
+    $paginator = AlbumPhoto::whereAlbumId($albumId)->paginate(1);
     return View::make('albums.photo', compact('paginator', 'albumId'));
   }
 

@@ -34,9 +34,9 @@
                   @endif
                 </h3>
                 @if(App::getLocale() == "en")
-                  <p>{{ $album->event_caption or "" }}</p>
+                  <p>{{ $album->caption or "" }}</p>
                 @else
-                  <p>{{ $album->guj_event_caption or "" }}</p>
+                  <p>{{ $album->guj_caption or "" }}</p>
                 @endif
 
                 @if(Auth::user())

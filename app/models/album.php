@@ -15,7 +15,7 @@ class Album extends Eloquent {
 
 	public function albumsPhotos()
   	{
-    	return $this->hasMany('AlbumPhotos', 'album_id');
+    	return $this->hasMany('AlbumPhoto', 'album_id');
   	}
 
 }

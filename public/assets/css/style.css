@@ -12,45 +12,31 @@ body{
   margin-top: 50px;
 }
 
-/* line 13, ../sass/style.scss 
-<option value="1">
 .inline {
   display: inline-block;
 }
 
-/* line 16, ../sass/style.scss 
-<option value="1">
 .block {
   display: block;
 }
 
-/* line 19, ../sass/style.scss 
-<option value="1">
 .m-show {
   display: none;
 }
 @media screen and (max-width: 992px) {
-  /* line 19, ../sass/style.scss 
-<option value="1">
   .m-show {
     display: block;
   }
 }
 
 @media screen and (max-width: 992px) {
-  /* line 27, ../sass/style.scss 
-<option value="1">
   .content {
     padding: 0 20px;
   }
-  /* line 30, ../sass/style.scss 
-<option value="1">
   .content > .row {
     margin-left: 0;
     margin-right: 0;
   }
-  /* line 34, ../sass/style.scss 
-<option value="1">
   .content .carousel.slide {
     margin-left: -20px;
     margin-right: -20px;
@@ -218,9 +204,8 @@ body{
   max-height: 200px;
 }
 
-/************************ Album Index Page ************************
+/************************ Album Index Page ************************/
 <option value="1">
-/* line 157, ../sass/style.scss 
 <option value="1">
 .gallery-album-cover img {
   height: 300px;
