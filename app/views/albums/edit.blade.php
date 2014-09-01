@@ -5,6 +5,7 @@
 <div class="row top-spacing-big">
    <div class="col-md-10 col-md-offset-1">
     {{ Form::model($album, array('route' => array('gallery.update', $album->id), 'class' => 'form-horizontal', 'files' => true, 'method' => 'PUT') ) }}
+      <legend>Edit Album</legend>
       <div class="form-group">
         {{ Form::label('name', 'Album Name', array('class' => 'col-md-2 control-label') ) }}
         <div class="col-md-10">

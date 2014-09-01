@@ -23,6 +23,7 @@ body{
 .m-show {
   display: none;
 }
+
 @media screen and (max-width: 992px) {
   .m-show {
     display: block;
@@ -41,6 +42,14 @@ body{
     margin-left: -20px;
     margin-right: -20px;
   }
+}
+
+.tales {
+  width: 100%;
+}
+.carousel-inner{
+  width:100%;
+  max-height: 400px !important;
 }
 
 /******************* Overlay **********************

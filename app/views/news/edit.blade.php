@@ -4,6 +4,7 @@
 <div class="row top-spacing-big">
   <div class="col-md-10 col-md-offset-1">
     {{ Form::model($news, array('route' => array('news.update', $news->id), 'class' => 'form-horizontal', 'method' => 'PUT', 'files' => true) ) }}
+    <legend>Edit Album</legend>
       @include('news._form')
       <div class="form-group">
         <div class="col-md-10 col-md-offset-2">

@@ -5,6 +5,7 @@
 <div class="row top-spacing-big">
   <div class="col-md-10 col-md-offset-1">
     {{ Form::model(null, array('route' => 'gallery.store', 'class' => 'form-horizontal', 'files' => true) ) }}
+      <legend>Create Album</legend>
       <div class="form-group">
         {{ Form::label('name', 'Album Name', array('class' => 'col-md-2 control-label') ) }}
         <div class="col-md-10">

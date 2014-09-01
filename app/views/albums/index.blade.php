@@ -16,7 +16,7 @@
           <div class="col-md-5 {{ $i%2 != 0 ? 'col-md-offset-2' : '' }}">
             <div class="thumbnail">
               <div class="gallery-album-cover">
-                @foreach($album->albumsPhotos->take(3) as $photo)
+                @foreach($album->albumsPhotos->take(1) as $photo)
                   <img src='{{ asset("image/gallery/$photo->filename") }}'>
                 @endforeach
               </div>
@@ -68,6 +68,6 @@
 @section('scripts')
   <script type="text/javascript" src="/assets/js/jquery.cycle.all.js"></script>
   <script>
-    $('.gallery-album-cover').cycle();
+    //$('.gallery-album-cover').cycle();
   </script>
 @stop

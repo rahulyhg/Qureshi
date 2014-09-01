@@ -20,13 +20,13 @@
     </div> -->
 
     <div class="item active">
-      <img src="assets/img/img1.bmp" height="500" width="1170">
+      <img src="assets/img/img1.bmp" height="250" width="1170">
     </div>
     <div class="item">
-      <img src="assets/img/img2.bmp" height="500" width="1170">
+      <img src="assets/img/img2.bmp" height="250" width="1170">
     </div>
     <div class="item">
-      <img src="assets/img/img3.bmp" height="500" width="1170">
+      <img src="assets/img/img3.bmp" height="250" width="1170">
     </div>
   </div>
 
@@ -101,7 +101,7 @@
       <div class="panel-body">
         <ul>
           <li>
-            <a href="/exam-result">{{ trans('home_page.submit_result') }}</a>
+            <a href="#">{{ trans('home_page.submit_result') }}</a>
           </li>
         </ul>
         @if($otherDocsLink)
